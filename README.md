@@ -12,10 +12,12 @@ This is a sample portfolio application using the following technologies:
  * MySQL database backend
 
 To create the database:
+
     cd server
+
     npm run init-db
 
--- Server Setup
+-Server Setup-
 
 To compile the server code
 
