@@ -1,6 +1,6 @@
 myreddit
 
-A simple reddit clone
+Intended to be a simple reddit clone - WORK IN PROGRESS (It doesnt work yet)
 This is a sample portfolio application using the following technologies:
 
  * React
