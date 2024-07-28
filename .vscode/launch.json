@@ -1,0 +1,75 @@
+{
+    "version": "0.2.0",
+    "compounds": [
+      {
+        "name": "Debug Full Stack",
+        "configurations": ["Debug React App", "Debug Express Server"]
+      }
+    ],
+    "configurations": [
+      {
+        "name": "Debug React App",
+        "type": "chrome",
+        "request": "launch",
+        "url": "http://localhost:3000",
+        "webRoot": "${workspaceFolder}/client/src",
+        "sourceMaps": true,
+        "trace": true,
+        "internalConsoleOptions": "openOnSessionStart"
+      },
+      {
+        "name": "Debug Express Server",
+        "type": "node",
+        "request": "launch",
+        "program": "${workspaceFolder}/server/src/server.ts",
+        "cwd": "${workspaceFolder}/server",
+        "runtimeArgs": [
+          "-r",
+          "ts-node/register",
+          "-r",
+          "tsconfig-paths/register"
+        ],
+        "envFile": "${workspaceFolder}/server/.env",
+        "outFiles": ["${workspaceFolder}/server/dist/**/*.js"],
+        "sourceMaps": true,
+        "console": "integratedTerminal",
+        "restart": true
+      },
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "Debug Server Jest Tests",
+        "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+        "args": [
+          "--runInBand",
+          "--config",
+          "jest.server.config.js"
+        ],
+        "internalConsoleOptions": "openOnSessionStart",
+        "skipFiles": ["<node_internals>/**"],
+        "runtimeArgs": [
+          "--preserve-symlinks"
+        ],
+        "console": "integratedTerminal",
+        "outFiles": ["${workspaceFolder}/dist/**/*.js"]
+      },
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "Debug Client Jest Tests",
+        "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+        "args": [
+          "--runInBand",
+          "--config",
+          "jest.client.config.js"
+        ],
+        "internalConsoleOptions": "openOnSessionStart",
+        "skipFiles": ["<node_internals>/**"],
+        "runtimeArgs": [
+          "--preserve-symlinks"
+        ],
+        "console": "integratedTerminal",
+        "outFiles": ["${workspaceFolder}/dist/**/*.js"]
+      }
+    ]
+  }

@@ -18,14 +18,19 @@ To create the database:
 -- Server Setup
 
 To compile the server code
+
     npm update
+
     npm install
+
     npx tsc
 
 To run unit tests:
+
     npm run test
 
 To run the server manually:
+
     npm start
 
 To *debug* (set breakpoints, etc) the application in VSCode:
