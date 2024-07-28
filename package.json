@@ -1,0 +1,16 @@
+{
+  "name": "mysystem",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm start",
+    "client": "cd client && npm start",
+    "build": "npm run build --prefix client && npm run build --prefix server"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "concurrently": "^8.2.2",
+    "jest-environment-jsdom": "^29.7.0",
+    "ts-jest": "^29.2.3"
+  }
+}
