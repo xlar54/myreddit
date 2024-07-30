@@ -21,7 +21,7 @@ const PostItemCollection : React.FC<PostItemCollectionProps> = ({posts}) => {
         <div className='post-item-collection'>
             {posts.map(post => (
 
-                <PostItem key={post.id} id={post.id} title={post.title} created_by={post.created_by} link={""} text={""} created_dtm={"1/1/1900"} />
+                <PostItem key={post.id} id={post.id} title={post.title} created_by={post.created_by} link={""} text={""} created_dtm={post.created_dtm} />
 
             ))}
         </div> 
