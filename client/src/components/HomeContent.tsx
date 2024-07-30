@@ -1,17 +1,7 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import PostItemCollection from './PostItemCollection';
 import { getPosts } from '../services/posts'
-
-interface Post {
-  id : number;
-  title: string;
-  link: string;
-  text: string;
-  created_by: number;
-  created_dtm: string;
-
-}
-
+import { Post } from '../interfaces'
 
 const HomeContent: React.FC = () => {
 

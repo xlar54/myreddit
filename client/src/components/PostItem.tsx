@@ -1,14 +1,5 @@
 import React from 'react';
-
-interface PostItemProps {
-    id : number;
-    title: string;
-    link: string;
-    text: string;
-    created_by: number;
-    created_dtm: string;
-
-}
+import { PostItemProps } from '../interfaces';
 
 const PostItem : React.FC<PostItemProps> = ( {id, title, created_by, created_dtm}) => {
     return (
